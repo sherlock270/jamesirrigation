@@ -1,32 +1,44 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .App {
   text-align: center;
+  background-image: url("https://images.pexels.com/photos/352096/pexels-photo-352096.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  max-width: 100vw;
+  width: 100%;
+  height: 100vh;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0 20px;
   color: white;
+  background-color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.header .logo {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header .logo p {
+  margin-right: 10px;
+}
+
+.header .links a {
+  margin-left: 10px;
 }
