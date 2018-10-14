@@ -13,6 +13,9 @@ const Header = props => {
         <a href="#">About Us</a>
         <a href="#">Contact Us</a>
       </span>
+      <span className="links-mobile">
+        <i class="fas fa-bars" />
+      </span>
     </div>
   );
 };
