@@ -9,7 +9,7 @@ const Header = props => {
       </span>
       <span className="links">
         <a href="#">Home</a>
-        <a href="#">Request An Appointment</a>
+        <Link to="/request">Request An Appointment</Link>
         <a href="#">About Us</a>
         <a href="#">Contact Us</a>
       </span>
