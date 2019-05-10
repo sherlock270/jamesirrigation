@@ -7,6 +7,14 @@ class Request extends React.Component {
       info: ""
     };
   }
+
+  render() {
+    return (
+      <div>
+        <p>Request an appointment</p>
+      </div>
+    );
+  }
 }
 
 export default Request;

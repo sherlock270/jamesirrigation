@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = props => {
   return (
@@ -8,10 +9,13 @@ const Header = props => {
         <i class="fas fa-tint" />
       </span>
       <span className="links">
-        <a href="#">Home</a>
+        <Link to="/">Home</Link>
         <Link to="/request">Request An Appointment</Link>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
+        <Link to="/about">About Us</Link>
+        <Link to="/contact">Contact Us</Link>
+        <p className="login-link" onClick={props.toggleModal}>
+          Log In
+        </p>
       </span>
       <span className="links-mobile">
         <i class="fas fa-bars" />
