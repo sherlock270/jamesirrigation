@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
+import { Route } from "react-router-dom";
 import Header from "./components/Header";
 import Request from "./components/Request";
-import { Route } from "react-router-dom";
+import Homepage from "./components/Homepage";
 
 class App extends Component {
   constructor() {
@@ -24,8 +25,13 @@ class App extends Component {
       <div className="App">
         <Route
           path="/"
+          render={props => <Header {...props} toggleModal={this.toggleModal} />}
+        />
+        <Route
+          exact
+          path="/"
           render={props => (
-            <Header
+            <Homepage
               {...props}
               toggleModal={this.toggleModal}
               showModal={this.state.showModal}
