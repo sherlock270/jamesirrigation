@@ -6,19 +6,31 @@ const Header = props => {
     <div className="header">
       <span className="logo">
         <p>Jesse James Irrigation</p>
-        <i class="fas fa-tint" />
+        <i className="fas fa-tint" />
       </span>
       <span className="links">
         <Link to="/">Home</Link>
         <Link to="/request">Request An Appointment</Link>
         <Link to="/about">About Us</Link>
         <Link to="/contact">Contact Us</Link>
-        <p className="login-link" onClick={props.toggleModal}>
-          Log In
-        </p>
+        {localStorage.getItem("loggedin") === "true" ? (
+          <p
+            className="login-link"
+            onClick={() => {
+              localStorage.setItem("loggedin", false);
+              props.history.push("/");
+            }}
+          >
+            Log out
+          </p>
+        ) : (
+          <p className="login-link" onClick={props.toggleModal}>
+            Log In
+          </p>
+        )}
       </span>
       <span className="links-mobile">
-        <i class="fas fa-bars" />
+        <i className="fas fa-bars" />
       </span>
     </div>
   );
