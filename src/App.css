@@ -43,6 +43,11 @@ a:hover {
   margin-left: 10px;
 }
 
+.header .links p {
+  display: inline;
+  margin-left: 10px;
+}
+
 .header .links-mobile {
   display: none;
 }
