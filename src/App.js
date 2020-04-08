@@ -4,18 +4,19 @@ import { Route } from "react-router-dom";
 import Header from "./components/Header";
 import Request from "./components/Request";
 import Homepage from "./components/Homepage";
+import Login from "./components/Login";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      showModal: false
+      showModal: false,
     };
     this.toggleModal = this.toggleModal.bind(this);
   }
 
   toggleModal() {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return { showModal: !prevState.showModal };
     });
   }
@@ -25,12 +26,14 @@ class App extends Component {
       <div className="App">
         <Route
           path="/"
-          render={props => <Header {...props} toggleModal={this.toggleModal} />}
+          render={(props) => (
+            <Header {...props} toggleModal={this.toggleModal} />
+          )}
         />
         <Route
           exact
           path="/"
-          render={props => (
+          render={(props) => (
             <Homepage
               {...props}
               toggleModal={this.toggleModal}
@@ -39,6 +42,7 @@ class App extends Component {
           )}
         />
         <Route path="/request" component={Request} />
+        {this.state.showModal ? <Login toggleModal={this.toggleModal} /> : null}
       </div>
     );
   }
